@@ -14,5 +14,11 @@ class Table extends Model
         'name',
         'capacity',
         'type',
+        'id_thematic'
     ];
+
+    public function thematic()
+    {
+        return $this->belongsTo(Thematic::class);
+    }
 }

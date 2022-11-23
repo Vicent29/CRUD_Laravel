@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Table;
 use App\Http\Resources\TableResource;
 use App\Http\Requests\StoreTableRequest;
-// use Illuminate\Http\Client\ResponseSequence;
+
 
 
 class TableController extends Controller
@@ -35,6 +35,7 @@ class TableController extends Controller
         $table->name = $request->name;
         $table->capacity = $request->capacity;
         $table->type = $request->type;
+        $table->id_thematic = $request->id_thematic;
         $table->save();
         return response()->json([
             "message" => "Creted new table"
