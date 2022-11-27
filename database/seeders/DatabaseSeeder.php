@@ -8,6 +8,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Thematic;
 use App\Models\Table;
 use App\Models\User;
+use App\Models\Reserva;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,5 +17,6 @@ class DatabaseSeeder extends Seeder
         Thematic::factory()->count(5)->create();
         Table::factory()->count(8)->create();
         User::factory()->count(10)->create();
+        Reserva::factory()->count(5)->create();
     }
 }

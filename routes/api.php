@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\ThematicController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ReservaController;
 
 // Routas Table
     // ESPECIFIC ROUTES
@@ -25,13 +26,9 @@ use App\Http\Controllers\UserController;
         // Route::delete('thematic/{id}', [ThematicController::class, 'destroy']);
         Route::post('thematic_sv', [ThematicController::class, 'store_sin_valid']);
         Route::put('thematic_sv/{id}', [ThematicController::class, 'update_sin_valid']);
-  
-        
-
-
-
 
  // ALL ROUTES
  Route::resource('table', TableController::class);
  Route::resource('thematic', ThematicController::class);
  Route::resource('user', UserController::class);
+ Route::resource('reserva', ReservaController::class);

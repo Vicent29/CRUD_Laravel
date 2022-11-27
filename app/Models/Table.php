@@ -21,4 +21,8 @@ class Table extends Model
     {
         return $this->belongsTo(Thematic::class);
     }
+    public function users()
+	{
+        return $this->morphedByMany(User::class, 'id_user');
+	}
 }

@@ -17,5 +17,10 @@ class User extends Model
        'email',
        'type_user'
    ];
+
+   public function tables()
+    {
+        return $this->morphedByMany(Table::class, 'id_table');
+    }
 }
 
